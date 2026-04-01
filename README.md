@@ -47,6 +47,20 @@
 └─ README.md
 ```
 
+## 配好后的“一键执行”命令
+
+在仓库根目录把 `config.local.ps1` 配好之后，直接执行这句：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "./config.local.ps1"
+```
+
+如果你当前就在 PowerShell 里，并且允许执行本地脚本，也可以直接：
+
+```powershell
+./config.local.ps1
+```
+
 ## 推荐用法
 
 别每次手敲一长串参数，纯属给自己找罪受。直接抄一份配置文件改成你自己的路径。
@@ -75,6 +89,8 @@ Copy-Item "./config.example.ps1" "./config.local.ps1"
 ```powershell
 powershell -ExecutionPolicy Bypass -File "./config.local.ps1"
 ```
+
+这句命令需要在仓库根目录执行，也就是和 `config.local.ps1` 同级的位置。
 
 ## 配置文件示例
 
